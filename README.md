@@ -1,4 +1,4 @@
-# Photogram GUI
+# Photogram Associations
 
 In this project, we'll re-write our association accessor methods using [ActiveRecord's powerful Association helpers](https://guides.rubyonrails.org/association_basics.html).
 
