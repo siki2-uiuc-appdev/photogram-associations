@@ -1,4 +1,4 @@
-image: jelaniwoods/appdev2021-photogram-associations
+image: jelaniwoods/appdev2021-photogram-associations@sha256:68d9e27ed19cb8e2badbae6a95e5f18789290304fbc9f7892cfc2aa21d10b686
 
 tasks:
   - init: bin/setup
