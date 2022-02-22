@@ -1,14 +1,16 @@
-image: jelaniwoods/appdev2021-photogram-associations@sha256:c58a6f30dbe878c1faafe37eae0ec558cef07d43ddd841566dff714715c72243
+image: patrickmckernin/photogram-associations-2022-winter
 
 tasks:
-  - command: bundle install
   - init: bin/setup
 ports:
   - port: 3000
     onOpen: open-preview
-    visibility: public
+  - port: 9515
+    onOpen: ignore
+
 
 vscode:
   extensions:
-    - shd101wyy.markdown-preview-enhanced
-    - wingrunr21.vscode-ruby
+    - vortizhe.simple-ruby-erb
+    - mbessey.vscode-rufo
+    - aliariff.vscode-erb-beautify
