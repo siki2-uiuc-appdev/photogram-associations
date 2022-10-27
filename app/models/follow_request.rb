@@ -27,6 +27,8 @@ class FollowRequest < ApplicationRecord
   #   return the_user
   # end
 
+  belongs_to(:sender, { :foreign_key => "sender_id", :class_name => "User"})
+
   # def recipient
   #   my_recipient_id = self.recipient_id
 
@@ -36,4 +38,6 @@ class FollowRequest < ApplicationRecord
 
   #   return the_user
   # end
+  
+  belongs_to(:recipient, { :foreign_key => "recipient_id", :class_name => "User"})
 end

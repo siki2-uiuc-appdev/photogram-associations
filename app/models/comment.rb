@@ -22,4 +22,6 @@ class Comment < ApplicationRecord
 
   #   return the_user
   # end
+
+  belongs_to(:commenter, { :foreign_key => "author_id", :class_name => "User"})
 end

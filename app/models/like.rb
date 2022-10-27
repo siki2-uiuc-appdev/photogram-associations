@@ -26,6 +26,8 @@ class Like < ApplicationRecord
   #   return the_user
   # end
 
+  belongs_to(:fan, { :foreign_key => "fan_id", :class_name => "User"})
+
   # def photo
   #   my_photo_id = self.photo_id
 
@@ -35,4 +37,6 @@ class Like < ApplicationRecord
 
   #   return the_photo
   # end
+
+  belongs_to(:photo, { :foreign_key => "photo_id", :class_name => "Photo" })
 end
