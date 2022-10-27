@@ -157,7 +157,7 @@ class User < ApplicationRecord
   #   my_leaders = self.leaders
     
   #   my_leaders.each do |a_user|
-  #     leader_own_photos = a_user.own_photos
+  #     leader_own_photos = a_user.photos
 
   #     leader_own_photos.each do |a_photo|
   #       array_of_photo_ids.push(a_photo.id)
@@ -168,6 +168,8 @@ class User < ApplicationRecord
 
   #   return matching_photos
   # end
+
+  has_many(:feed, { :through => :leaders, :source => :photos})
 
   # def discover
   #   array_of_photo_ids = Array.new
@@ -186,4 +188,6 @@ class User < ApplicationRecord
 
   #   return matching_photos
   # end
+
+  has_many(:discover, { :through => :leaders, :source => :liked_photos})
 end
