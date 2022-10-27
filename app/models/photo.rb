@@ -61,7 +61,7 @@ class Photo < ApplicationRecord
   #   return matching_users
   # end
 
-  has_many(:fans, { })
+  has_many(:fans, { :through => :likes, :source => :fan})
 
   # def fan_list
   #   my_fans = self.fans
@@ -76,4 +76,6 @@ class Photo < ApplicationRecord
 
   #   return formatted_usernames
   # end
+
+  has_many(:fan_list, -> {select :username}, { :through => :likes, :source => :fan })
 end
